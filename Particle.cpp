@@ -2,27 +2,36 @@
 
 void Particle::update(float deltaTime)
 {
-    m_acceleration = m_accumForce * m_inverseMasse;
-
-    m_velocity += m_acceleration * deltaTime;
-    m_position += m_velocity * deltaTime;
+	for (Component* c : components) {
+		c->Update();
+		c->RenderImGui();
+	}
 }
 
-void Particle::draw() const
+void Particle::addComponent(Component* c)
 {
-    ofSetColor(m_color);
-    ofFill();
-    ofDrawSphere(m_position, m_width);
+	components.push_back(c);
 }
 
-void Particle::addForce(const vec3& force) {
-    m_accumForce += force;
-}
+//void Particle::update(float deltaTime)
+//{
+//    m_acceleration = m_accumForce * m_inverseMasse;
+//
+//    m_velocity += m_acceleration * deltaTime;
+//    m_position += m_velocity * deltaTime;
+//}
 
-void Particle::clearAccum()
-{
-    m_accumForce = vec3(0, 0, 0);
-}
+
+
+
+//void Particle::addForce(const vec3& force) {
+//    m_accumForce += force;
+//}
+//
+//void Particle::clearAccum()
+//{
+//    m_accumForce = vec3(0, 0, 0);
+//}
 
 
 //void Particle::handleInput()
