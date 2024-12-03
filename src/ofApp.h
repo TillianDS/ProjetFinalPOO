@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "../World.h"
 
 class ofApp : public ofBaseApp{
 
@@ -22,5 +23,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 		void exit();
 
-		
+private : 
+	World world;
 };

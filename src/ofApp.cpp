@@ -12,19 +12,24 @@ void ofApp::setup(){
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init("#version 150");
     }
+
+    world = World();
+    Particle* p = new Particle();
+    world.addParticle(p);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-   
+    float deltaTime = ofGetLastFrameTime() * 8;
+    std::cout << deltaTime << std::endl;
+    
+    world.update(deltaTime);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
     // Rendu graphique openFrameworks
     ofBackground(30, 30, 30); // Fond noir
-    ofSetColor(255, 100, 100);
-    ofDrawCircle(ofGetWidth() / 2, ofGetHeight() / 2, 100);
 
     // Démarrer une nouvelle frame ImGui
     ImGui_ImplOpenGL3_NewFrame();
@@ -44,6 +49,8 @@ void ofApp::draw() {
     // Rendu ImGui
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+    world.draw();
 }
 
 //--------------------------------------------------------------

@@ -17,10 +17,28 @@
     <ClCompile Include="Vendor\ImGui\backends\imgui_impl_opengl3.cpp" />
     <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx11.cpp" />
     <ClCompile Include="Vendor\ImGui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Particle.cpp">
+      <Filter>src\Particule</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleForceRegistry.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleGravity.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>src\Physics</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Particule">
+      <UniqueIdentifier>{4db4c3cc-6521-4995-a8fa-5d2cc219af44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Physics">
+      <UniqueIdentifier>{0319823b-c132-4784-a537-66da89ca58c3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +57,21 @@
     <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx11.h" />
     <ClInclude Include="Vendor\ImGui\backends\imgui_impl_glfw.h" />
     <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="Particle.h">
+      <Filter>src\Particule</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleForceGenerator.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleForceRegistry.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleGravity.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>src\Physics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />
