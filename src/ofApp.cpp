@@ -49,8 +49,6 @@ void ofApp::draw() {
     // Rendu ImGui
     ImGui::Render();
     ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-    world.draw();
 }
 
 //--------------------------------------------------------------
