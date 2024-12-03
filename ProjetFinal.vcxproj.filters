@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\imgui.cpp" />
+    <ClCompile Include="Vendor\ImGui\imgui_demo.cpp" />
+    <ClCompile Include="Vendor\ImGui\imgui_draw.cpp" />
+    <ClCompile Include="Vendor\ImGui\imgui_tables.cpp" />
+    <ClCompile Include="Vendor\ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_win32.cpp" />
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx9.cpp" />
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_glfw.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imstb_truetype.h" />
+    <ClInclude Include="Vendor\ImGui\imconfig.h" />
+    <ClInclude Include="Vendor\ImGui\imgui.h" />
+    <ClInclude Include="Vendor\ImGui\imgui_internal.h" />
+    <ClInclude Include="Vendor\ImGui\imstb_rectpack.h" />
+    <ClInclude Include="Vendor\ImGui\imstb_textedit.h" />
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx9.h" />
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3_loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+  </ItemGroup>
+</Project>
