@@ -3,14 +3,15 @@
 #include "src/Component.h"
 #include "ofMain.h"
 
-class C_GraphicalRenderer : Component
+class C_GraphicalRenderer : public Component
 {
 public:
+	C_GraphicalRenderer() {};
 	void Update(Particle* p) override;
-	void RenderImGui() override;
+	void RenderImGui(Particle* p) override;
 
 private :
-	void DrawShape(float size, glm::vec3 position);
+	void DrawShape(float width, glm::vec3 position);
 
 	enum Color {
 		RED,

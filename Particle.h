@@ -26,6 +26,7 @@ public:
     ~Particle() {};
 
     void update(float deltaTime);
+    void RenderImgui(int index);
 
     void addComponent(Component* c);
 

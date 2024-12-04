@@ -1,19 +1,22 @@
 #include "C_GraphicalRenderer.h"
 
+
 void C_GraphicalRenderer::Update(Particle* p)
 {
 	SetColor();
 	DrawShape(10, p->getPosition());
 }
 
-void C_GraphicalRenderer::RenderImGui()
+void C_GraphicalRenderer::RenderImGui(Particle* p)
 {
-
+	ImGui::Text("Bonjour de graphical renderer");
+	SetColor();
+	DrawShape(p->getWidth(), p->getPosition());
 }
 
-void C_GraphicalRenderer::DrawShape(float size, glm::vec3 position)
+void C_GraphicalRenderer::DrawShape(float width, glm::vec3 position)
 {
-	ofDrawCircle(position.x, position.y, size);
+	ofDrawCircle(position.x, position.y, width);
 }
 
 void C_GraphicalRenderer::SetColor()

@@ -10,7 +10,7 @@ void C_Gravity::Update(Particle* particle)
 	particle->addForce(force);
 }
 
-void C_Gravity::RenderImGui()
+void C_Gravity::RenderImGui(Particle* p)
 {
 	return;
 }

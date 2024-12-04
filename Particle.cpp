@@ -4,7 +4,6 @@ void Particle::update(float deltaTime)
 {
 	for (Component* c : components) {
 		c->Update(this);
-		c->RenderImGui();
 	}
 
 	m_acceleration = m_accumForce * m_inverseMasse;
@@ -12,6 +11,19 @@ void Particle::update(float deltaTime)
     m_position += m_velocity * deltaTime;
 
 	clearAccum();
+}
+void Particle::RenderImgui(int index)
+{
+	int value = 0;
+
+	//if (ImGui::InputInt("Position", &value)) {
+	//	//std::cout << "Integer entered: " << value << std::endl;
+	//}
+
+	ImGui::Text("Particle %d", index);
+	for (Component* c : components) {
+		c->RenderImGui(this);
+	}
 }
 
 void Particle::addComponent(Component* c)

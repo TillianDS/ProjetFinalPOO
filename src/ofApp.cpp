@@ -2,20 +2,26 @@
 #include "imgui.h"
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
-
+#include "../C_GraphicalRenderer.h"
 //--------------------------------------------------------------
 void ofApp::setup(){
     auto glfwWindow = dynamic_cast<ofAppGLFWWindow*>(ofGetWindowPtr());
     if (glfwWindow) {
         GLFWwindow* window = glfwWindow->getGLFWWindow();
         ImGui::CreateContext();
+        ImGuiIO& io = ImGui::GetIO();
+        io.FontGlobalScale = ImGuiSize;
         ImGui_ImplGlfw_InitForOpenGL(window, true);
         ImGui_ImplOpenGL3_Init("#version 150");
     }
-
     world = World();
-    Particle* p = new Particle();
-    world.addParticle(p);
+
+    for (int i = 0; i < 2; i++){
+        Particle* p = new Particle();
+        Component* graphComponent = new C_GraphicalRenderer();
+        p->addComponent(graphComponent);
+        world.addParticle(p);
+    }
 }
 
 //--------------------------------------------------------------
@@ -28,27 +34,9 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-    // Rendu graphique openFrameworks
-    ofBackground(30, 30, 30); // Fond noir
+    ofBackground(30, 30, 30);
 
-    // Démarrer une nouvelle frame ImGui
-    ImGui_ImplOpenGL3_NewFrame();
-    ImGui_ImplGlfw_NewFrame();
-    ImGui::NewFrame();
-
-    // Fenêtre ImGui
-    ImGui::Begin("Paramètres");
-    ImGui::Text("Bonjour depuis ImGui!");
-    static float slider = 0.5f;
-    ImGui::SliderFloat("Mon slider", &slider, 0.0f, 1.0f);
-    if (ImGui::Button("Cliquez ici")) {
-        ofLog() << "Bouton cliqué!";
-    }
-    ImGui::End();
-
-    // Rendu ImGui
-    ImGui::Render();
-    ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+    world.renderImGui(ImGuiSize);
 }
 
 //--------------------------------------------------------------

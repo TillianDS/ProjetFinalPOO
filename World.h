@@ -14,6 +14,7 @@ public:
 
     void update(float deltaTime);
 
+    void renderImGui(float ImGuiSize);
 
 private:
     std::vector<Particle*> particles;
