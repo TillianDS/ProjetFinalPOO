@@ -25,4 +25,5 @@ class ofApp : public ofBaseApp{
 
 private : 
 	World world;
+	float ImGuiSize = 1.5f;
 };

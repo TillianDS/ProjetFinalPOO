@@ -10,7 +10,7 @@ public:
 	~C_Gravity() override;
 
 	void Update(Particle* particle) override;
-	void RenderImGui() override;
+	void RenderImGui(Particle *p) override;
 
 private:
 	vec3 gravity;
