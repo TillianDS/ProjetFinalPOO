@@ -42,10 +42,7 @@ public:
     void setInverseMasse(float inverseMasse) { m_inverseMasse = inverseMasse; };
     void addForce(const vec3& force);
     void clearAccum();
-    
-    //void draw() const;
-    
-    
+   
 };
 
 #endif // Particule_h

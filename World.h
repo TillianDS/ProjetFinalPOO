@@ -4,6 +4,7 @@
 #include "Particle.h"
 #include "ParticleForceRegistry.h"
 #include "ParticleGravity.h"
+#include "CollisionsSysteme.h"
 
 class World {
 public:
@@ -17,4 +18,5 @@ public:
 
 private:
     std::vector<Particle*> particles;
+    CollisionSystem collisionSystem;
 };

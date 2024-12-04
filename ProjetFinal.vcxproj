@@ -106,7 +106,10 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CollisionsSysteme.cpp" />
+    <ClCompile Include="C_Collisions.cpp" />
     <ClCompile Include="C_Gravity.cpp" />
+    <ClCompile Include="Global.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleForceRegistry.cpp" />
     <ClCompile Include="ParticleGravity.cpp" />
@@ -125,7 +128,10 @@
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CollisionsSysteme.h" />
+    <ClInclude Include="C_Collisions.h" />
     <ClInclude Include="C_Gravity.h" />
+    <ClInclude Include="Global.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleForceGenerator.h" />
     <ClInclude Include="ParticleForceRegistry.h" />
