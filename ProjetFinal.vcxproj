@@ -108,6 +108,7 @@
   <ItemGroup>
     <ClCompile Include="CollisionsSysteme.cpp" />
     <ClCompile Include="C_Collisions.cpp" />
+    <ClCompile Include="C_GraphicalRenderer.cpp" />
     <ClCompile Include="C_Gravity.cpp" />
     <ClCompile Include="Global.cpp" />
     <ClCompile Include="Particle.cpp" />
@@ -130,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="CollisionsSysteme.h" />
     <ClInclude Include="C_Collisions.h" />
+    <ClInclude Include="C_GraphicalRenderer.h" />
     <ClInclude Include="C_Gravity.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="Particle.h" />

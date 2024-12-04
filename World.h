@@ -19,5 +19,5 @@ public:
 
 private:
     std::vector<Particle*> particles;
-    CollisionSystem collisionSystem;
+    //CollisionSystem collisionSystem;
 };

@@ -25,6 +25,9 @@
     <ClCompile Include="C_Collisions.cpp" />
     <ClCompile Include="CollisionsSysteme.cpp" />
     <ClCompile Include="Global.cpp" />
+    <ClCompile Include="C_GraphicalRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -59,6 +62,9 @@
     <ClInclude Include="C_Collisions.h" />
     <ClInclude Include="CollisionsSysteme.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="C_GraphicalRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="icon.rc" />

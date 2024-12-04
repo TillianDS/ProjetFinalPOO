@@ -18,7 +18,7 @@ void World::update(float deltaTime) {
     for (Particle* p : particles) {
         p->update(deltaTime);
     }
-    collisionSystem.detectAndResolveCollisions(particlePhysics);
+    //collisionSystem.detectAndResolveCollisions(particlePhysics);
 
 }
 

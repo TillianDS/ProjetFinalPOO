@@ -12,5 +12,5 @@ void C_Gravity::Update(Particle* particle)
 
 void C_Gravity::RenderImGui(Particle* p)
 {
-	return;
+	ImGui::Text("Gravity ?");
 }
