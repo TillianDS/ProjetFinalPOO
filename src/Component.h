@@ -18,9 +18,9 @@ public :
 		ImGui::Text(name.c_str());
 		ImGui::SameLine();
 
-		string id = "Activate" + to_string(ParticleIndex);
+		string id = "Activate" + to_string(ParticleIndex) + name;
 		ImGui::PushID(id.c_str());
-		ImGui::Checkbox("Activate", &bIsActive);
+		ImGui::Checkbox("", &bIsActive);
 		ImGui::PopID();
 	}
 

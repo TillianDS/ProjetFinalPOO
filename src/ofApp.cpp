@@ -3,6 +3,11 @@
 #include "backends/imgui_impl_glfw.h"
 #include "backends/imgui_impl_opengl3.h"
 #include "../C_GraphicalRenderer.h"
+#include "../C_Gravity.h"
+#include "../C_Collisions.h"
+#include "../C_Velocity.h"
+#include "../Global.h"
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     auto glfwWindow = dynamic_cast<ofAppGLFWWindow*>(ofGetWindowPtr());
@@ -19,7 +24,13 @@ void ofApp::setup(){
     for (int i = 0; i < 2; i++){
         Particle* p = new Particle();
         Component* graphComponent = new C_GraphicalRenderer();
+        Component* gravityComponent = new C_Gravity();
+        Component* collisionsComponent = new C_Collisions();
+        Component* velocityComponent = new C_Velocity();
         p->addComponent(graphComponent);
+        p->addComponent(gravityComponent);
+        p->addComponent(collisionsComponent);
+        p->addComponent(velocityComponent);
         world.addParticle(p);
     }
 }
@@ -27,7 +38,6 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
     float deltaTime = ofGetLastFrameTime() * 8;
-    std::cout << deltaTime << std::endl;
     
     world.update(deltaTime);
 }

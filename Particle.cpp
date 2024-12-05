@@ -2,7 +2,7 @@
 
 void Particle::update(float deltaTime)
 {
-	m_position = m_initialPosition;
+	//m_position = m_initialPosition;
 
 	for (Component* c : components) {
 		c->Update(this);
@@ -59,19 +59,3 @@ void Particle::clearAccum()
 {
     m_accumForce = vec3(0, 0, 0);
 }
-
-
-//void Particle::handleInput()
-//{
-//    if (IsPlayer) {
-//        if (ofGetKeyPressed(OF_KEY_LEFT)) {
-//            setVelocity(getVelocity() + Vector(-2, 0, 0));
-//        }
-//        if (ofGetKeyPressed(OF_KEY_RIGHT)) {
-//            setVelocity(getVelocity() + Vector(2, 0, 0));
-//        }
-//        if (ofGetKeyPressed(OF_KEY_UP)) {
-//            setVelocity(getVelocity() + Vector(0, -5, 0));
-//        }
-//    }
-//}

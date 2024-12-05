@@ -1,3 +1,3 @@
-//#include "Global.h"
-//
-//vector<Particle*> particlePhysics;
+#include "Global.h"
+
+vector<Particle*> particlePhysics;

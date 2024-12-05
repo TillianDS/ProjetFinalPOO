@@ -7,7 +7,6 @@ void C_GraphicalRenderer::Update(Particle* p)
 
 void C_GraphicalRenderer::ImGuiBody(Particle* p, int ParticleIndex)
 {
-	ImGui::Text("Graphical renderer");
 	SetColor();
 	DrawShape(p->getWidth(), p->getPosition());
 
