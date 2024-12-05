@@ -6,11 +6,11 @@ using namespace glm;
 class C_Gravity : public Component
 {
 public:
-	C_Gravity(vec3 gravity = vec3(0, 9.81, 0)) : gravity(gravity){};
+	C_Gravity(vec3 gravity = vec3(0, 9.81, 0)) : gravity(gravity) { name = "Gravity"; };
 	~C_Gravity() override;
 
 	void Update(Particle* particle) override;
-	void RenderImGui(Particle *p) override;
+	void ImGuiBody(Particle *p, int ParticleIndex) override;
 
 private:
 	vec3 gravity;

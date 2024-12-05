@@ -10,7 +10,6 @@ void C_Gravity::Update(Particle* particle)
 	particle->addForce(force);
 }
 
-void C_Gravity::RenderImGui(Particle* p)
+void C_Gravity::ImGuiBody(Particle* p, int ParticleIndex)
 {
-	ImGui::Text("Gravity ?");
 }

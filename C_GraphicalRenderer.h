@@ -6,19 +6,21 @@
 class C_GraphicalRenderer : public Component
 {
 public:
-	C_GraphicalRenderer() {};
+	C_GraphicalRenderer() { name = "Graphical Renderer"; };
+
 	void Update(Particle* p) override;
-	void RenderImGui(Particle* p) override;
+	void ImGuiBody(Particle* p, int ParticleIndex) override;
 
 private :
 	void DrawShape(float width, glm::vec3 position);
 
 	enum Color {
-		RED,
+		RED = 0,
 		BLUE,
 		GREEN,
 		WHITE,
-		BLACK
+		BLACK,
+		MaxOptions
 	};
 
 	Color ActiveColor;

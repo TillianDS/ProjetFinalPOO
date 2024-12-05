@@ -18,11 +18,14 @@ private:
     vec3 m_acceleration;
     vec3 m_accumForce;  
 
+    vec3 m_initialPosition;
     vector<Component*> components;
 
 public:
     Particle(vec3 pos = vec3(0, 0, 0), float w = 10, float Im = 1.0f, vec3 velocity = vec3(), vec3 a = vec3()) :
-        m_width(w), m_position(pos), m_velocity(velocity), m_acceleration(a), m_inverseMasse(Im){};
+        m_width(w), m_position(pos), m_velocity(velocity), m_acceleration(a), m_inverseMasse(Im){
+        m_initialPosition = vec3();
+    };
     ~Particle() {};
 
     void update(float deltaTime);

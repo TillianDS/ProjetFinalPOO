@@ -3,15 +3,29 @@
 
 void C_GraphicalRenderer::Update(Particle* p)
 {
-	SetColor();
-	DrawShape(10, p->getPosition());
 }
 
-void C_GraphicalRenderer::RenderImGui(Particle* p)
+void C_GraphicalRenderer::ImGuiBody(Particle* p, int ParticleIndex)
 {
-	ImGui::Text("Bonjour de graphical renderer");
+	ImGui::Text("Graphical renderer");
 	SetColor();
 	DrawShape(p->getWidth(), p->getPosition());
+
+
+	const char* colorString[] = {
+		"RED",
+		"BLUE",
+		"GREEN",
+		"WHITE",
+		"BLACK"
+	};
+
+	ImGui::Text("Couleur");
+	ImGui::SameLine();
+	string id = "x" + to_string(ParticleIndex);
+	ImGui::PushID(id.c_str());
+	ImGui::Combo("##Combo", (int*)&ActiveColor, colorString, Color::MaxOptions);
+	ImGui::PopID();
 }
 
 void C_GraphicalRenderer::DrawShape(float width, glm::vec3 position)

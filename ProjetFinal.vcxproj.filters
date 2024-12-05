@@ -7,16 +7,6 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Vendor\ImGui\imgui.cpp" />
-    <ClCompile Include="Vendor\ImGui\imgui_demo.cpp" />
-    <ClCompile Include="Vendor\ImGui\imgui_draw.cpp" />
-    <ClCompile Include="Vendor\ImGui\imgui_tables.cpp" />
-    <ClCompile Include="Vendor\ImGui\imgui_widgets.cpp" />
-    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_win32.cpp" />
-    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx9.cpp" />
-    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx11.cpp" />
-    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_glfw.cpp" />
     <ClCompile Include="C_Gravity.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleForceRegistry.cpp" />
@@ -28,28 +18,49 @@
     <ClCompile Include="C_GraphicalRenderer.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Vendor\ImGui\imgui.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\imgui_demo.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\imgui_draw.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx9.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_dx11.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_glfw.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_opengl3.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\backends\imgui_impl_win32.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\imgui_tables.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Vendor\ImGui\imgui_widgets.cpp">
+      <Filter>src\ImGui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
       <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ImGui">
+      <UniqueIdentifier>{0e7eac40-49e4-4687-ad21-5c95fdcfaebe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Vendor\ImGui\imstb_truetype.h" />
-    <ClInclude Include="Vendor\ImGui\imconfig.h" />
-    <ClInclude Include="Vendor\ImGui\imgui.h" />
-    <ClInclude Include="Vendor\ImGui\imgui_internal.h" />
-    <ClInclude Include="Vendor\ImGui\imstb_rectpack.h" />
-    <ClInclude Include="Vendor\ImGui\imstb_textedit.h" />
-    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_win32.h" />
-    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx9.h" />
-    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3.h" />
-    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx11.h" />
-    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_glfw.h" />
-    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="C_Gravity.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleForceGenerator.h" />
@@ -64,6 +75,42 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="C_GraphicalRenderer.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imconfig.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imgui.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx9.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_dx11.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_glfw.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_opengl3_loader.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\backends\imgui_impl_win32.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imgui_internal.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imstb_rectpack.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imstb_textedit.h">
+      <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Vendor\ImGui\imstb_truetype.h">
+      <Filter>src\ImGui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

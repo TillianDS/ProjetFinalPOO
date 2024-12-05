@@ -2,6 +2,8 @@
 
 void Particle::update(float deltaTime)
 {
+	m_position = m_initialPosition;
+
 	for (Component* c : components) {
 		c->Update(this);
 	}
@@ -14,15 +16,33 @@ void Particle::update(float deltaTime)
 }
 void Particle::RenderImgui(int index)
 {
-	int value = 0;
-
-	//if (ImGui::InputInt("Position", &value)) {
-	//	//std::cout << "Integer entered: " << value << std::endl;
-	//}
-
 	ImGui::Text("Particle %d", index);
+
+	ImGui::PushItemWidth(50);
+
+	ImGui::Text("Initial position");
+
+	string Xid = "x" + to_string(index);
+	ImGui::PushID(Xid.c_str());
+	ImGui::Text("x");
+	ImGui::SameLine();
+	ImGui::InputFloat("", &m_initialPosition.x, 0.0f, 0.0f, "%.2f");
+	ImGui::PopID();
+
+	string Yid = "y" + to_string(index);
+	ImGui::PushID(Yid.c_str());
+	ImGui::SameLine();
+	ImGui::Text("y");
+	ImGui::SameLine();
+	ImGui::InputFloat("", &m_initialPosition.y, 0.0f, 0.0f, "%.2f");
+	ImGui::PopID();
+
 	for (Component* c : components) {
-		c->RenderImGui(this);
+		ImGui::Dummy(ImVec2(0, 10));
+
+		ImGui::BeginGroup();
+		c->RenderImGui(this, index);
+		ImGui::EndGroup();
 	}
 }
 

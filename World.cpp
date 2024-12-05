@@ -40,6 +40,8 @@ void World::renderImGui(float ImGuiSize)
         addParticle(new Particle());
     }
 
+    ImGui::Separator();
+
     int index = 1;
     for (Particle* p : particles) {
         ImGui::BeginGroup();
