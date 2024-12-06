@@ -16,21 +16,21 @@ void C_Velocity::Update(Particle* particle)
 
 void C_Velocity::ImGuiBody(Particle* p, int ParticleIndex)
 {
+    string velocityId = "##Velocity" + to_string(ParticleIndex);
+
     static float tempX = m_velocity.x;
     static float tempY = m_velocity.y;
-    /*std::string uniqueID = "Valider##" + std::to_string(reinterpret_cast<std::uintptr_t>(this));*/
 
-    //// Champs de saisie pour X et Y
-    ImGui::InputFloat("X", &tempX);
+    ImGui::InputFloat(("X" + velocityId).c_str(), &tempX);
     ImGui::SameLine();
-    ImGui::InputFloat("Y", &tempY);
+    ImGui::InputFloat(("Y" + velocityId).c_str(), &tempY);
 
-    // Bouton "Valider"
-    if (ImGui::Button("Valider"))
+    // Bouton "Valider" avec un ID unique
+    if (ImGui::Button(("Valider" + velocityId).c_str()))
     {
         // Appliquer les modifications à m_velocity
         m_velocity.x = tempX;
-        m_velocity.y = tempY;
+        m_velocity.y = -tempY;
     }
 
 }

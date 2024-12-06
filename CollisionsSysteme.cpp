@@ -1,6 +1,7 @@
 #include "CollisionsSysteme.h"
 
 bool CollisionSystem::checkForCollision(const Particle& p1, const Particle& p2) {
+    std::cout << "dans check for collosions" << std::endl;
     vec3 distanceVector = p1.getPosition() - p2.getPosition();
     double distance = glm::length(distanceVector);
     double sumOfRadii = p1.getWidth() + p2.getWidth();
@@ -25,6 +26,7 @@ void CollisionSystem::resolveCollision(Particle& p1, Particle& p2) {
     // Appliquer les impulsions
     p1.setVelocity(p1.getVelocity() + impulse * p1.getInverseMasse());
     p2.setVelocity(p2.getVelocity() - impulse * p2.getInverseMasse());
+    std::cout << "dans resolve and velocity :" << p1.getVelocity().x << p1.getVelocity().y << std::endl;
 }
 
 

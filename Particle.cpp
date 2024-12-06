@@ -2,18 +2,22 @@
 
 void Particle::update(float deltaTime)
 {
-	//m_position = m_initialPosition;
-
 	for (Component* c : components) {
 		c->Update(this);
 	}
 
 	m_acceleration = m_accumForce * m_inverseMasse;
-    m_velocity += m_acceleration * deltaTime;
-    m_position += m_velocity * deltaTime;
+	m_velocity += m_acceleration * deltaTime;
+	m_position += m_velocity * deltaTime;
+
+	if (m_position == m_startPosition) {
+		m_position = m_initialPosition;
+		m_startPosition = m_initialPosition;
+	}
 
 	clearAccum();
 }
+
 void Particle::RenderImgui(int index)
 {
 	ImGui::Text("Particle %d", index);

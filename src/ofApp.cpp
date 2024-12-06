@@ -7,6 +7,7 @@
 #include "../C_Collisions.h"
 #include "../C_Velocity.h"
 #include "../Global.h"
+#include "../C_Respawn.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -27,10 +28,12 @@ void ofApp::setup(){
         Component* gravityComponent = new C_Gravity();
         Component* collisionsComponent = new C_Collisions();
         Component* velocityComponent = new C_Velocity();
+        Component* respawnComponent = new C_Respawn();
         p->addComponent(graphComponent);
         p->addComponent(gravityComponent);
         p->addComponent(collisionsComponent);
         p->addComponent(velocityComponent);
+        p->addComponent(respawnComponent);
         world.addParticle(p);
     }
 }
