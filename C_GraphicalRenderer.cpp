@@ -21,9 +21,11 @@ void C_GraphicalRenderer::ImGuiBody(Particle* p, int ParticleIndex)
 
 	ImGui::Text("Couleur");
 	ImGui::SameLine();
-	string id = "x" + to_string(ParticleIndex);
+	string id = "Color" + to_string(ParticleIndex);
 	ImGui::PushID(id.c_str());
+	ImGui::PushItemWidth(100);
 	ImGui::Combo("##Combo", (int*)&ActiveColor, colorString, Color::MaxOptions);
+	ImGui::PopItemWidth();
 	ImGui::PopID();
 }
 

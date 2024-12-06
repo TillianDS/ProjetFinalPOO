@@ -7,17 +7,12 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="C_Gravity.cpp" />
     <ClCompile Include="Particle.cpp" />
     <ClCompile Include="ParticleForceRegistry.cpp" />
     <ClCompile Include="ParticleGravity.cpp" />
     <ClCompile Include="World.cpp" />
-    <ClCompile Include="C_Collisions.cpp" />
     <ClCompile Include="CollisionsSysteme.cpp" />
     <ClCompile Include="Global.cpp" />
-    <ClCompile Include="C_GraphicalRenderer.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="Vendor\ImGui\imgui.cpp">
       <Filter>src\ImGui</Filter>
     </ClCompile>
@@ -48,6 +43,18 @@
     <ClCompile Include="Vendor\ImGui\imgui_widgets.cpp">
       <Filter>src\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="C_GraphicalRenderer.cpp">
+      <Filter>src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Velocity.cpp">
+      <Filter>src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Collisions.cpp">
+      <Filter>src\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Gravity.cpp">
+      <Filter>src\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -56,12 +63,14 @@
     <Filter Include="src\ImGui">
       <UniqueIdentifier>{0e7eac40-49e4-4687-ad21-5c95fdcfaebe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Components">
+      <UniqueIdentifier>{b656f13e-a6e5-4c97-bba4-d1d349316a18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C_Gravity.h" />
     <ClInclude Include="Particle.h" />
     <ClInclude Include="ParticleForceGenerator.h" />
     <ClInclude Include="ParticleForceRegistry.h" />
@@ -70,12 +79,8 @@
     <ClInclude Include="src\Component.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="C_Collisions.h" />
     <ClInclude Include="CollisionsSysteme.h" />
     <ClInclude Include="Global.h" />
-    <ClInclude Include="C_GraphicalRenderer.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="Vendor\ImGui\imconfig.h">
       <Filter>src\ImGui</Filter>
     </ClInclude>
@@ -111,6 +116,18 @@
     </ClInclude>
     <ClInclude Include="Vendor\ImGui\imstb_truetype.h">
       <Filter>src\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Velocity.h">
+      <Filter>src\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="C_GraphicalRenderer.h">
+      <Filter>src\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Collisions.h">
+      <Filter>src\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Gravity.h">
+      <Filter>src\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
