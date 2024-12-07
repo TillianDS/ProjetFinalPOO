@@ -55,6 +55,9 @@
     <ClCompile Include="C_Gravity.cpp">
       <Filter>src\Components</Filter>
     </ClCompile>
+    <ClCompile Include="C_Respawn.cpp">
+      <Filter>src\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -127,6 +130,9 @@
       <Filter>src\Components</Filter>
     </ClInclude>
     <ClInclude Include="C_Gravity.h">
+      <Filter>src\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Respawn.h">
       <Filter>src\Components</Filter>
     </ClInclude>
   </ItemGroup>

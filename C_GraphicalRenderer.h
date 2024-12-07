@@ -6,7 +6,7 @@
 class C_GraphicalRenderer : public Component
 {
 public:
-	C_GraphicalRenderer() { name = "Graphical Renderer"; };
+	C_GraphicalRenderer() { name = "Renderer"; };
 
 	void Update(Particle* p) override;
 	void ImGuiBody(Particle* p, int ParticleIndex) override;
@@ -23,7 +23,7 @@ private :
 		MaxOptions
 	};
 
-	Color ActiveColor;
+	Color ActiveColor = WHITE;
 
 	void SetColor();
 

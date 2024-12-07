@@ -1,4 +1,6 @@
-#pragma once
+#ifndef COMPONENT_H
+#define COMPONENT_H
+
 #include "../Particle.h"
 #include "imgui.h"
 #include "backends/imgui_impl_glfw.h"
@@ -18,10 +20,14 @@ public :
 		ImGui::Text(name.c_str());
 		ImGui::SameLine();
 
-		string id = "Activate" + to_string(ParticleIndex) + name;
+		string id = "Activate_Suppr" + to_string(ParticleIndex) + name;
 		ImGui::PushID(id.c_str());
 		ImGui::Checkbox("", &bIsActive);
+		/*ImGui::SameLine();
+		if(ImGui::Button("-") && p) p->removeComponent(this);*/
 		ImGui::PopID();
+
+
 	}
 
 	virtual void ImGuiBody(Particle* p, int ParticleIndex) = 0;
@@ -36,3 +42,5 @@ public :
 
 	virtual ~Component() = default;
 };
+
+#endif // COMPONENT_H

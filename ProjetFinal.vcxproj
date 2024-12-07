@@ -110,6 +110,7 @@
     <ClCompile Include="C_Collisions.cpp" />
     <ClCompile Include="C_GraphicalRenderer.cpp" />
     <ClCompile Include="C_Gravity.cpp" />
+    <ClCompile Include="C_Respawn.cpp" />
     <ClCompile Include="C_Velocity.cpp" />
     <ClCompile Include="Global.cpp" />
     <ClCompile Include="Particle.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="C_Collisions.h" />
     <ClInclude Include="C_GraphicalRenderer.h" />
     <ClInclude Include="C_Gravity.h" />
+    <ClInclude Include="C_Respawn.h" />
     <ClInclude Include="C_Velocity.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="Particle.h" />

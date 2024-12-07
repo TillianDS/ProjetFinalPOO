@@ -5,7 +5,7 @@
 class C_Collisions :public Component
 {
 public: 
-	C_Collisions() { name = "collisions"; bIsActive = false; };
+	C_Collisions() { name = "Collisions"; bIsActive = false; };
 	~C_Collisions() override;
 
 	void Update(Particle* particle) override;

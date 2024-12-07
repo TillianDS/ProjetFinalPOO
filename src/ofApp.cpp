@@ -22,7 +22,7 @@ void ofApp::setup(){
     }
     world = World();
 
-    for (int i = 0; i < 2; i++){
+    /*for (int i = 0; i < 2; i++){
         Particle* p = new Particle();
         Component* graphComponent = new C_GraphicalRenderer();
         Component* gravityComponent = new C_Gravity();
@@ -31,11 +31,10 @@ void ofApp::setup(){
         Component* respawnComponent = new C_Respawn();
         p->addComponent(graphComponent);
         p->addComponent(gravityComponent);
-        p->addComponent(collisionsComponent);
         p->addComponent(velocityComponent);
         p->addComponent(respawnComponent);
         world.addParticle(p);
-    }
+    }*/
 }
 
 //--------------------------------------------------------------

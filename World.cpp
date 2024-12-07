@@ -24,14 +24,12 @@ void World::update(float deltaTime) {
 
 void World::renderImGui(float ImGuiSize)
 {
-
-    // D�marrer une nouvelle frame ImGui
     ImGui_ImplOpenGL3_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
 
-    ImVec2 windowSize = ImVec2(225*particles.size()*ImGuiSize, 300* ImGuiSize);
+    ImVec2 windowSize = ImVec2(00*particles.size()*ImGuiSize, 00*ImGuiSize);
     ImGui::SetNextWindowSize(windowSize);
 
     ImGui::Begin("Gestionnaire de particle");
@@ -50,8 +48,6 @@ void World::renderImGui(float ImGuiSize)
         ImGui::SameLine();
         index++;
     }
-
-    
     ImGui::End();
 
     ImGui::Render();

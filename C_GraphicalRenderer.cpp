@@ -27,6 +27,8 @@ void C_GraphicalRenderer::ImGuiBody(Particle* p, int ParticleIndex)
 	ImGui::Combo("##Combo", (int*)&ActiveColor, colorString, Color::MaxOptions);
 	ImGui::PopItemWidth();
 	ImGui::PopID();
+
+	
 }
 
 void C_GraphicalRenderer::DrawShape(float width, glm::vec3 position)

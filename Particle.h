@@ -7,6 +7,8 @@
 using namespace glm;
 class Component;
 
+static const vector<string> allComponents = { "Renderer", "Velocity", "Gravity", "Respawn" };
+
 class Particle
 {
 private:
@@ -22,6 +24,8 @@ private:
 
     vector<Component*> components;
 
+    int addComponentIndex = -1;
+
 public:
     Particle(vec3 pos = vec3(10, 768, 0), float w = 10, float Im = 1.0f, vec3 velocity = vec3(), vec3 a = vec3()) :
         m_width(w), m_position(pos), m_velocity(velocity), m_acceleration(a), m_inverseMasse(Im){
@@ -34,6 +38,8 @@ public:
     void RenderImgui(int index);
 
     void addComponent(Component* c);
+    void removeComponent(Component* c);
+    void RenderAddComponent(int index);
 
     const vec3& getPosition() const { return m_position; };
     vec3 getInitialPosition() const { return m_initialPosition; };
