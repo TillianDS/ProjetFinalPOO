@@ -12,6 +12,8 @@ void C_Respawn::Update(Particle* particle)
         if (m_mode == RespawnMode::Lifetime) {
             // Respawn basé sur la durée de vie
             if (m_elapsedTime >= m_lifetime) {
+                particle->setAcceleration(vec3(0, 0, 0));
+                particle->setVelocity(vec3(0, 0, 0));
                 particle->setPosition(particle->getInitialPosition());
                 m_elapsedTime = 0.0f;  // Réinitialiser le temps écoulé
             }
@@ -23,9 +25,13 @@ void C_Respawn::Update(Particle* particle)
             float screenHeight = ofGetHeight();
 
             if (pos.x < 0 || pos.x > screenWidth || pos.y < 0 || pos.y > screenHeight) {
+                particle->setAcceleration(vec3(0, 0, 0));
+                particle->setVelocity(vec3(0, 0, 0));
                 particle->setPosition(particle->getInitialPosition());
             }
         }
+
+
     }
 }
 
